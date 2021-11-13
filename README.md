@@ -1,2 +1,2 @@
-# web2-cukraszda
-WEB II. beadandó
+# web2-utazas
+WEB II. beadandó 2.

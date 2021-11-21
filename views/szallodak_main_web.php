@@ -25,7 +25,7 @@
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
               Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br><br>
 
-            <?php $conn=new mysqli("localhost","root","","utazas123");?>
+            <?php $conn=new mysqli("localhost","utazas123","Matthev17","utazas123");?>
 
             <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
             <script type="text/javascript">
@@ -68,7 +68,7 @@
             <div id="barchart_material" style="width: 900px; height: 500px;"></div>
                 <table>
                   <?php
-                  $dbh = new PDO('mysql:host=localhost;dbname=utazas123', 'root', '',
+                  $dbh = new PDO('mysql:host=localhost;dbname=utazas123', 'utazas123', 'Matthev17',
                                               array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
                   $result = $dbh->query("SELECT * FROM szalloda ORDER BY az DESC")->fetchAll();
                   ?>

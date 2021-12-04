@@ -52,13 +52,30 @@
   </tr>
   
 </table>
+<div id="pdfid" style="display:none;"></div>
 
         
-                      <form action="proba.php" method="post">  
-                          <input type="submit" name="create_pdf" class="btn btn-danger" value="Create PDF" />  
-                     </form> 
+      <button id="createPdf" class="btn btn-danger">
+        Create PDF
+      </button>
   
     </div>
+
+<script>
+  $('#createPdf').click(function() {
+    var nev = $("#nev").text();
+    var cim = $("#cim").text();
+    var tel = $("#tel").text();
+    var mail = $("#mail").text();
+    var id = $("#pdfid").text();
+
+    if (nev === '' || cim === '' || tel === '' || mail === '') {
+      alert("Mind a 3 fieldet válaszd ki!");
+    } else {
+      window.open(`pdfcreator.php?id=${id}`)
+    }   
+  });
+</script>
     
 	
 

@@ -62,6 +62,7 @@ function orszagok() {
       $("#cim").text(data.cim);
       $("#tel").text(data.tel);
       $("#mail").text(data.email);
+      $("#pdfid").text(data.id);
       },
       "json" 
       );

@@ -53,10 +53,10 @@
         $dbh = new PDO('mysql:host=localhost;dbname=utazas123', 'root', '',
                       array(PDO::ATTR_ERRMODE=>PDO::ERRMODE_EXCEPTION));
         $dbh->query('SET NAMES utf8 COLLATE utf8_hungarian_ci');
-        $stmt = $dbh->prepare("select szalloda_az, indulas, idotartam, ar from tavasz where sorszam = :id");
+        $stmt = $dbh->prepare("select szalloda_az, indulas, idotartam, ar, sorszam from tavasz where sorszam = :id");
         $stmt->execute(Array(":id" => $_POST["id"]));
         if($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-              $eredmeny = array("nev" => $row['szalloda_az'], "cim" => $row['indulas'], "tel" => $row['idotartam'], "email" => $row['ar']);
+              $eredmeny = array("nev" => $row['szalloda_az'], "cim" => $row['indulas'], "tel" => $row['idotartam'], "email" => $row['ar'], "id" => $row['sorszam']);
         }
       }
       catch(PDOException $e) {
